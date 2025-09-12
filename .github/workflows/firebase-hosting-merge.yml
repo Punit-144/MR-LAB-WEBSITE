@@ -1,0 +1,26 @@
+name: Deploy to Firebase Hosting on merge
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install Node.js and dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Use the Node.js version your project requires
+
+      - run: npm install  # Ensure all dependencies are installed
+
+      - run: npm run build  # Builds the Next.js app (equivalent to next build)
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYPROJECT_F74AB }}
+          channelId: live
+          projectId: myproject-f74ab

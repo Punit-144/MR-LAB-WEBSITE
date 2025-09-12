@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.pop-in-out {
+  animation: popup 5s ease-in-out infinite;
+}
+.floater {
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes popup {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 80%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.scroll-match {
+  animation: scroll-matcher linear alternate-reverse;
+  animation-timeline: view(0px 80vh);
+}
+@keyframes scroll-matcher {
+  to {
+    transform: scale(2);
+  }
+}
+@keyframes scaleProgress2 {
+  to {
+    opacity: 0;
+  }
+}
+.pop-in-out {
+  animation: popup 5s ease-in-out infinite;
+}
+
+@keyframes popup {
+  0% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: 0px -100px;
+  }
+  100% {
+    translate: 0px 0px;
+  }
+}
+.--team {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238d1516' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.video-hero {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.hero-heading {
+  text-wrap: nowrap;
+  /* background: -webkit-linear-gradient(-90deg, #eee, rgb(193, 189, 189));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+.parallax-container-2 {
+  animation: parallax linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(-50%) translateX(-50%) scale(1);
+  }
+  to {
+    transform: translateY(-300vh) translateX(-50%) scale(4);
+  }
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .card {
+    display: inline-block;
+  }
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+    margin-right: 3px;
+  }
+}
+
+.scrolling-wrapper,
+.scrolling-wrapper-flexbox {
+  min-height: 60vh;
+  height: fit-content;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
