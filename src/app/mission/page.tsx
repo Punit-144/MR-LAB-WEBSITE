@@ -93,6 +93,110 @@ export default function MissionPage() {
 
 
 
+// "use client";
+
+// import Navbar from "../components/Navbar";
+// import MobileNav from "../components/MobileNav";
+// import Footer from "../sections/Footer";
+// import { useEffect, useState } from "react";
+// import { FaArrowUp } from "react-icons/fa";
+
+// export default function MissionPage() {
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [openNavi, setOpenNavi] = useState(false);
+//   const [showScrollTop, setShowScrollTop] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setShowScrollTop(window.scrollY > 300);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   };
+
+//   return (
+//     <main className="w-full overflow-x-hidden relative text-black font-poppins flex flex-col gap-32">
+//       <MobileNav activeTab={activeTab} setActiveTab={setActiveTab} openNavi={openNavi} setOpenNavi={setOpenNavi} />
+//       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+
+//       {/* Header */}
+//       <section className="w-full mt-28 md:mt-32 text-center px-6">
+//         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Mission & Vision</h1>
+//         <p className="max-w-2xl mx-auto text-black-700 text-sm md:text-base">
+//           Learn about the driving goals and long-term vision behind iHub Drishti's AR/VR vertical.
+//         </p>
+//       </section>
+
+//       {/* Card Layout */}
+//       <section className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+//         <div className="rounded-lg shadow-md p-6 bg-white text-center">
+//           <h2 className="text-xl font-semibold text-primary mb-3">Our Mission</h2>
+//           <p className="text-sm font-poppins text-gray">
+//            The mission of the Mixed Reality Lab at iHub Drishti is to pioneer cutting-edge research and development in the convergence of physical and digital realities.
+//            We aim to design, develop, and deploy immersive Mixed Reality (MR) solutions that solve real-world challenges across domains such as healthcare, education, cultural heritage, industry 4.0, and human-computer interaction.
+//            By integrating computer vision, augmented reality (AR), virtual reality (VR), haptics, IoT, and artificial intelligence, the lab strives to create inclusive and dependable MR systems.
+//            Our mission includes nurturing a robust innovation ecosystem that connects researchers, startups, industry partners, and the government to bring transformative technologies from lab to life.
+//           </p>
+//         </div>
+
+//         <div className="rounded-lg shadow-md p-6 bg-white text-center">
+//           <h2 className="text-xl font-semibold text-primary mb-3">Our Vision</h2>
+//           <p className="text-sm font-poppins text-gray">
+//             Our vision is to become a nationally and globally recognized hub for Mixed Reality innovation that redefines how humans interact with technology and their environments.
+//             We envision a future where immersive technologies empower individuals, enhance productivity, preserve cultural narratives, and bridge gaps in accessibility and communication.
+//             By advancing state-of-the-art research, fostering interdisciplinary collaboration, and translating deep-tech into scalable solutions, the Mixed Reality Lab aspires to play a pivotal role in shaping the next generation of intelligent, interactive, and impactful experiences.
+//             Through this, we aim to contribute meaningfully to India's journey as a leader in frontier technologies.
+//           </p>
+//         </div>
+//       </section>
+
+//       <Footer />
+
+//       {/* Back to Top Button */}
+//       {showScrollTop && (
+//         <button
+//           onClick={scrollToTop}
+//           className="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all z-[150]"
+//           aria-label="Back to top"
+//         >
+//           <FaArrowUp />
+//         </button>
+//       )}
+//     </main>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -127,7 +231,7 @@ export default function MissionPage() {
       <section className="w-full mt-28 md:mt-32 text-center px-6">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Mission & Vision</h1>
         <p className="max-w-2xl mx-auto text-black-700 text-sm md:text-base">
-          Learn about the driving goals and long-term vision behind iHub Drishti's AR/VR vertical.
+          Learn about the driving goals and long-term vision behind iHub Drishti&apos;s AR/VR vertical.
         </p>
       </section>
 
@@ -149,7 +253,7 @@ export default function MissionPage() {
             Our vision is to become a nationally and globally recognized hub for Mixed Reality innovation that redefines how humans interact with technology and their environments.
             We envision a future where immersive technologies empower individuals, enhance productivity, preserve cultural narratives, and bridge gaps in accessibility and communication.
             By advancing state-of-the-art research, fostering interdisciplinary collaboration, and translating deep-tech into scalable solutions, the Mixed Reality Lab aspires to play a pivotal role in shaping the next generation of intelligent, interactive, and impactful experiences.
-            Through this, we aim to contribute meaningfully to India's journey as a leader in frontier technologies.
+            Through this, we aim to contribute meaningfully to India&apos;s journey as a leader in frontier technologies.
           </p>
         </div>
       </section>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@egjs/react-view3d": "^2.3.1",
     "@react-pdf/renderer": "^4.3.0",
+    "@vercel/kv": "^3.0.0",
     "framer-motion": "^11.18.2",
     "next": "^15.1.6",
     "react": "^18",
